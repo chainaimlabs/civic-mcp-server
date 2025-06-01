@@ -1,0 +1,46 @@
+{
+  "name": "civic-pass-mcp-server-ts",
+  "version": "3.0.0",
+  "description": "Professional TypeScript MCP Server with real Civic Pass API integration",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "start": "npm run build && node dist/index.js",
+    "dev": "npm run build:watch & sleep 3 && nodemon dist/index.js",
+    "clean": "rm -rf dist/",
+    "prebuild": "npm run clean",
+    "test": "npm run build && node dist/test.js",
+    "test:api": "npm run build && node dist/test-api.js",
+    "test:auth": "npm run build && node dist/test-auth.js",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "validate": "npm run lint && npm run build && npm run test:api"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "nodemon": "^3.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "civic-pass",
+    "xdc",
+    "mcp-server",
+    "typescript",
+    "oauth2",
+    "identity-verification",
+    "real-api"
+  ]
+}
