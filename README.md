@@ -11,8 +11,8 @@ civic-mcp-server
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/chainaimlabs/xdc-goat-mcp-server.git
-   cd xdc-goat-mcp-server
+   git clone https://github.com/chainaimlabs/civic-mcp-server.git
+   cd civic-mcp-server
    ```
 
 2. **Install dependencies**
@@ -29,25 +29,3 @@ civic-mcp-server
    ```bash
    npm start
    ```
-
-### MCP Client Configuration
-
-#### Claude Desktop
-
-Add the following to your Claude Desktop configuration file (`claude_desktop_config.json`):
-
-```json
-{
-  "mcpServers": {
-    "xdc-goat-mcp": {
-      "command": "node",
-      "args": ["/path/to/xdc-goat-mcp-server/dist/index.js"],
-      "env": {
-        "CHAIN_ID": "51",
-        "RPC_URL": "https://rpc.xdcrpc.com"
-      }
-    }
-  }
-}
-```
-
